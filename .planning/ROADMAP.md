@@ -7,7 +7,7 @@ Project Brain will be initialized in three progressive MVP phases. We start by s
 ## Phases
 
 - [x] **Phase 1: Memory Directory & Document Templates** - Seed folders and 10 memory documents (completed 2026-06-22)
-- [ ] **Phase 2: Memory Agent Automation Script** - Write Python Memory Agent and package as a skill
+- [x] **Phase 2: Memory Agent Automation Script** - Write Python Memory Agent and package as a skill (completed 2026-06-22)
 - [ ] **Phase 3: Verification & Integration Testing** - Build test suite to verify automated memory updates
 
 ## Phase Details
@@ -43,11 +43,13 @@ Plans:
   2. Memory Agent parses walkthrough files to extract decisions, patterns, and mistakes
   3. Skill configuration exists at `.agents/skills/memory-agent/SKILL.md`
 
-**Plans**: 1 plan
+**Plans**: 1/1 plans complete
 
 Plans:
 
-- [ ] 02-01: Implement Python Memory Agent and register local skill
+- [x] 02-01-PLAN.md
+
+- [x] 02-01: Implement Python Memory Agent and register local skill
 
 ### Phase 3: Verification & Integration Testing
 
@@ -73,5 +75,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Memory Directory & Templates | 1/1 | Complete   | 2026-06-22 |
-| 2. Memory Agent Script | 0/1 | Not started | - |
+| 2. Memory Agent Script | 1/1 | Complete   | 2026-06-22 |
 | 3. Verification & Testing | 0/1 | Not started | - |

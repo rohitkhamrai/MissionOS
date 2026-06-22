@@ -18,10 +18,10 @@
 
 ### Memory Agent
 
-- [ ] **AGT-01**: Implement Python script `memory_agent.py` to parse task outputs and execute memory updates
-- [ ] **AGT-02**: Memory Agent automatically extracts decisions, patterns, and mistakes from git commit messages and walkthrough files
-- [ ] **AGT-03**: Memory Agent compresses updated state into `master-memory.md` under 5,000 words limit
-- [ ] **AGT-04**: Package the Memory Agent as a local Antigravity/Gemini skill in `.agents/skills/memory-agent` with valid `SKILL.md`
+- [x] **AGT-01**: Implement Python script `memory_agent.py` to parse task outputs and execute memory updates
+- [x] **AGT-02**: Memory Agent automatically extracts decisions, patterns, and mistakes from git commit messages and walkthrough files
+- [x] **AGT-03**: Memory Agent compresses updated state into `master-memory.md` under 5,000 words limit
+- [x] **AGT-04**: Package the Memory Agent as a local Antigravity/Gemini skill in `.agents/skills/memory-agent` with valid `SKILL.md`
 
 ### Test Harness
 
@@ -58,10 +58,10 @@
 | DIR-06 | Phase 1 | Complete |
 | DIR-07 | Phase 1 | Complete |
 | DIR-08 | Phase 1 | Complete |
-| AGT-01 | Phase 2 | Pending |
-| AGT-02 | Phase 2 | Pending |
-| AGT-03 | Phase 2 | Pending |
-| AGT-04 | Phase 2 | Pending |
+| AGT-01 | Phase 2 | Complete |
+| AGT-02 | Phase 2 | Complete |
+| AGT-03 | Phase 2 | Complete |
+| AGT-04 | Phase 2 | Complete |
 | TST-01 | Phase 3 | Pending |
 | TST-02 | Phase 3 | Pending |
 
