@@ -7,14 +7,14 @@
 
 ### Directory & Templates
 
-- [ ] **DIR-01**: Initialize directory structure (`brain/`, `skills/`, `workflows/`, `source-code/`)
-- [ ] **DIR-02**: Seed `master-memory.md` with high-level architecture, decisions, and patterns snapshots
-- [ ] **DIR-03**: Seed `memory.md` with core project metadata, goals, and active work statuses
-- [ ] **DIR-04**: Seed `architecture.md` with design system, backend/frontend layouts, and data flows
-- [ ] **DIR-05**: Seed `patterns.md` with standard implementation patterns and code templates
-- [ ] **DIR-06**: Seed `decisions.md` with log table of architecture and tooling decisions
-- [ ] **DIR-07**: Seed `mistakes.md` with logs of resolved/prevented pitfalls and lessons learned
-- [ ] **DIR-08**: Seed remaining files (`roadmap.md`, `glossary.md`, `dependency-graph.md`, `feature-map.md`)
+- [x] **DIR-01**: Initialize directory structure (`brain/`, `skills/`, `workflows/`, `source-code/`)
+- [x] **DIR-02**: Seed `master-memory.md` with high-level architecture, decisions, and patterns snapshots
+- [x] **DIR-03**: Seed `memory.md` with core project metadata, goals, and active work statuses
+- [x] **DIR-04**: Seed `architecture.md` with design system, backend/frontend layouts, and data flows
+- [x] **DIR-05**: Seed `patterns.md` with standard implementation patterns and code templates
+- [x] **DIR-06**: Seed `decisions.md` with log table of architecture and tooling decisions
+- [x] **DIR-07**: Seed `mistakes.md` with logs of resolved/prevented pitfalls and lessons learned
+- [x] **DIR-08**: Seed remaining files (`roadmap.md`, `glossary.md`, `dependency-graph.md`, `feature-map.md`)
 
 ### Memory Agent
 
@@ -50,14 +50,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DIR-01 | Phase 1 | Pending |
-| DIR-02 | Phase 1 | Pending |
-| DIR-03 | Phase 1 | Pending |
-| DIR-04 | Phase 1 | Pending |
-| DIR-05 | Phase 1 | Pending |
-| DIR-06 | Phase 1 | Pending |
-| DIR-07 | Phase 1 | Pending |
-| DIR-08 | Phase 1 | Pending |
+| DIR-01 | Phase 1 | Complete |
+| DIR-02 | Phase 1 | Complete |
+| DIR-03 | Phase 1 | Complete |
+| DIR-04 | Phase 1 | Complete |
+| DIR-05 | Phase 1 | Complete |
+| DIR-06 | Phase 1 | Complete |
+| DIR-07 | Phase 1 | Complete |
+| DIR-08 | Phase 1 | Complete |
 | AGT-01 | Phase 2 | Pending |
 | AGT-02 | Phase 2 | Pending |
 | AGT-03 | Phase 2 | Pending |
@@ -66,6 +66,7 @@
 | TST-02 | Phase 3 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 14 total
 - Mapped to phases: 14
 - Unmapped: 0 ✓
