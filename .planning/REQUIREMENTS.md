@@ -25,8 +25,8 @@
 
 ### Test Harness
 
-- [ ] **TST-01**: Implement Python integration test script `test_memory_agent.py` to run automated verification of memory updates
-- [ ] **TST-02**: Test harness validates all updated files comply with markdown schemas and budget limits
+- [x] **TST-01**: Implement Python integration test script `test_memory_agent.py` to run automated verification of memory updates
+- [x] **TST-02**: Test harness validates all updated files comply with markdown schemas and budget limits
 
 ## v2 Requirements
 
@@ -62,8 +62,8 @@
 | AGT-02 | Phase 2 | Complete |
 | AGT-03 | Phase 2 | Complete |
 | AGT-04 | Phase 2 | Complete |
-| TST-01 | Phase 3 | Pending |
-| TST-02 | Phase 3 | Pending |
+| TST-01 | Phase 3 | Complete |
+| TST-02 | Phase 3 | Complete |
 
 **Coverage:**
 
