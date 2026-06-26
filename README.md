@@ -1,6 +1,5 @@
 # MissionOS
-
-**Repository Name:** last-minute-life-saver  
+ 
 **Product Name:** MissionOS
 
 > **MissionOS is our solution to the "Last-Minute Life Saver" problem statement.**
