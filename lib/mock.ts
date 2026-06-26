@@ -1,8 +1,8 @@
 import { MissionAnalysis } from "@/types/mission";
 
 export function getMockMission(url?: string): MissionAnalysis {
-  let isNext = url?.includes("next.js");
-  let isBootstrap = url?.includes("bootstrap");
+  const isNext = url?.includes("next.js");
+  const isBootstrap = url?.includes("bootstrap");
 
   if (isNext) {
     return {
@@ -32,6 +32,11 @@ export function getMockMission(url?: string): MissionAnalysis {
         "Parsed 2,143 open issues",
         "Detected Vercel/Next.js repository",
         "Identified Turbopack PR bottlenecks"
+      ],
+      primary_risks: [
+        "Turbopack instability in edge cases",
+        "Community confusion over Server Actions v2 delay",
+        "Incomplete documentation frustrates early adopters"
       ],
       milestones: [
         { title: "Stabilize Turbopack HMR", expected_day: 2, critical: true },
@@ -69,6 +74,11 @@ export function getMockMission(url?: string): MissionAnalysis {
         "Parsed 340 open issues",
         "Detected twbs/bootstrap repository",
         "Identified CSS Grid migration conflicts"
+      ],
+      primary_risks: [
+        "Legacy codebase maintenance overhead",
+        "Sub-optimal grid performance",
+        "Alienation of modern CSS-in-JS developers"
       ],
       milestones: [
         { title: "Revert CSS Grid Branch", expected_day: 1, critical: true },
@@ -115,6 +125,11 @@ export function getMockMission(url?: string): MissionAnalysis {
       "Identified 45 pending PRs",
       "Detected React/TypeScript stack",
       "Analyzed 230k Stargazers"
+    ],
+    primary_risks: [
+      "Core architecture setup takes longer than 1 day",
+      "API rate limits during integration testing",
+      "Burnout due to reduced buffering in schedule"
     ],
     milestones: [
       { title: "Core Architecture Setup", expected_day: 1, critical: true },

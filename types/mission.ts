@@ -15,6 +15,7 @@ export interface MissionAnalysis {
   recommended: string | null;
   rejected_alternatives_summary: string;
   evidence_reviewed: string[];
+  primary_risks: string[];
   milestones: {
     title: string;
     expected_day: number;

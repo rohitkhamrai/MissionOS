@@ -39,6 +39,10 @@ const missionSchema = {
       type: SchemaType.ARRAY,
       items: { type: SchemaType.STRING },
     },
+    primary_risks: {
+      type: SchemaType.ARRAY,
+      items: { type: SchemaType.STRING },
+    },
     milestones: {
       type: SchemaType.ARRAY,
       items: {
@@ -59,6 +63,7 @@ const missionSchema = {
     "recommended",
     "rejected_alternatives_summary",
     "evidence_reviewed",
+    "primary_risks",
     "milestones",
   ],
 } as Schema;

@@ -6,6 +6,8 @@ import FailureAnalysis from "@/components/FailureAnalysis";
 import StrategyCards from "@/components/StrategyCards";
 import MilestoneTimeline from "@/components/MilestoneTimeline";
 import AgentActivity from "@/components/AgentActivity";
+import AgentLoop from "@/components/AgentLoop";
+import DriftMonitor from "@/components/DriftMonitor";
 import { analyzeMission } from "@/lib/gemini";
 import type { MissionAnalysis, RenegotiationInput } from "@/types/mission";
 import { simulateLatency, getMockRenegotiation } from "@/lib/mock";
@@ -25,6 +27,7 @@ export default function Home() {
   const [activityLog, setActivityLog] = useState<{ id: number, text: string, type: 'success' | 'warning' | 'error' }[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isDemoMode, setIsDemoMode] = useState(false);
+  const [lastDriftEvent, setLastDriftEvent] = useState<DriftEvent | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -93,6 +96,16 @@ export default function Home() {
       
       setResult(newMission);
       
+      const prevProb = result?.strategies.find(s => s.id === result.recommended)?.success ?? 0;
+      const newProb = newMission.strategies.find(s => s.id === newMission.recommended)?.success ?? 0;
+      
+      setLastDriftEvent({
+        ...event,
+        previousProb: prevProb,
+        newProb: newProb
+      });
+      setTimeout(() => setLastDriftEvent(null), 8000);
+      
       if (newMission.feasible === false && newMission.strategies.length === 0) {
         addLog("Critical failure: No feasible recovery exists", "error");
       } else {
@@ -159,6 +172,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-gray-300 p-4 md:p-8 selection:bg-blue-900/50 overflow-x-hidden">
+      <DriftMonitor event={lastDriftEvent} />
       
       {/* Developer Panel */}
       <div className="fixed bottom-4 right-4 bg-[#0a0a0a]/90 backdrop-blur-sm border border-white/5 p-3 rounded-lg shadow-2xl flex items-center gap-3 z-50 transition-colors hover:border-white/10">
@@ -232,6 +246,9 @@ export default function Home() {
                 />
               )}
               
+              {/* Agent Loop */}
+              <AgentLoop active={isRenegotiating} />
+
               {/* 5. Why This Plan */}
               {result.strategies.length > 0 && (
                 <section className="border-l-2 border-blue-900/50 pl-6 py-2 transition-colors duration-300">
