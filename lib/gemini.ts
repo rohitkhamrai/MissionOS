@@ -25,8 +25,8 @@ const missionSchema = {
         properties: {
           id: { type: SchemaType.STRING },
           label: { type: SchemaType.STRING },
-          success: { type: SchemaType.NUMBER },
-          sacrifice_score: { type: SchemaType.NUMBER },
+          success: { type: SchemaType.NUMBER, description: "Success probability percentage (0-100)" },
+          sacrifice_score: { type: SchemaType.NUMBER, description: "A score from 1 to 10 indicating how painful the required cuts are." },
           cuts: { type: SchemaType.ARRAY, items: { type: SchemaType.STRING } },
           reason: { type: SchemaType.STRING },
         },

@@ -28,6 +28,7 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isDemoMode, setIsDemoMode] = useState(false);
   const [lastDriftEvent, setLastDriftEvent] = useState<DriftEvent | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -210,7 +211,7 @@ export default function Home() {
         <section className="space-y-12 pb-24">
           {/* 1. Mission Input */}
           {!result && (
-            <MissionForm onAnalyze={handleAnalyze} onLog={addLog} isDemoMode={isDemoMode} />
+            <MissionForm onAnalyze={handleAnalyze} onLog={addLog} isDemoMode={isDemoMode} onLoadingChange={setIsAnalyzing} />
           )}
 
           {result && (
@@ -245,9 +246,7 @@ export default function Home() {
                   recommended={result.recommended || ""} 
                 />
               )}
-              
-              {/* Agent Loop */}
-              <AgentLoop active={isRenegotiating} />
+
 
               {/* 5. Why This Plan */}
               {result.strategies.length > 0 && (
@@ -274,6 +273,11 @@ export default function Home() {
                 />
               )}
             </div>
+          )}
+
+          {/* Agent Loop */}
+          {(isAnalyzing || isRenegotiating || result) && (
+            <AgentLoop active={isAnalyzing || isRenegotiating} />
           )}
 
           {/* 7. Agent Activity (Always visible if logs exist, allows seeing process before result) */}

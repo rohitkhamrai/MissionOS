@@ -24,6 +24,14 @@ export function getMockMission(url?: string): MissionAnalysis {
           sacrifice_score: 5,
           cuts: ["Drop documentation overhaul"],
           reason: "We can save the compiler and server actions if we sacrifice documentation and examples."
+        },
+        {
+          id: "all-in-risk",
+          label: "All-In Release",
+          success: 40,
+          sacrifice_score: 2,
+          cuts: ["Delay minor bug fixes"],
+          reason: "Attempt to ship Turbopack, React Compiler, and Server Actions v2 simultaneously. High risk of catastrophic launch failure."
         }
       ],
       recommended: "delay-features",
@@ -66,6 +74,14 @@ export function getMockMission(url?: string): MissionAnalysis {
           sacrifice_score: 4,
           cuts: ["Drop IE11 fallback scripts"],
           reason: "We push the grid rewrite but accept a 60% chance of community backlash due to broken layouts."
+        },
+        {
+          id: "hybrid-approach",
+          label: "Phased Grid Rollout",
+          success: 75,
+          sacrifice_score: 6,
+          cuts: ["Delay container queries", "Partial mixin deprecation"],
+          reason: "Introduce CSS Grid as an opt-in feature for v6, preserving mixins but warning about future deprecation."
         }
       ],
       recommended: "keep-mixins",

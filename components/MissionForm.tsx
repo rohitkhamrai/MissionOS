@@ -14,11 +14,13 @@ const DEMO_REPOS = [
 function MissionForm({ 
   onAnalyze,
   onLog,
-  isDemoMode
+  isDemoMode,
+  onLoadingChange
 }: { 
   onAnalyze: (data: MissionAnalysis) => void;
   onLog: (text: string, type?: 'success'|'warning'|'error') => void;
   isDemoMode: boolean;
+  onLoadingChange?: (loading: boolean) => void;
 }) {
   const [description, setDescription] = useState("");
   const [githubUrl, setGithubUrl] = useState("");
@@ -46,6 +48,7 @@ function MissionForm({
     e.preventDefault();
     if (!description.trim() && !githubUrl.trim()) return;
 
+    if (onLoadingChange) onLoadingChange(true);
     setLoadingStatus("Initializing protocol...");
     setError(null);
     onLog("Initiating intake protocol...", "success");
@@ -121,6 +124,7 @@ function MissionForm({
       setError(errorMessage);
     } finally {
       setLoadingStatus(null);
+      if (onLoadingChange) onLoadingChange(false);
     }
   }
 
