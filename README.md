@@ -55,8 +55,8 @@ graph TD
 
 ```bash
 # Clone repository
-git clone https://github.com/your-repo/last-minute-life-saver.git
-cd last-minute-life-saver
+git clone https://github.com/rohitkhamrai/MissionOS.git
+cd MissionOS
 
 # Install dependencies
 npm install
